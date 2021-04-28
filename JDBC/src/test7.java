@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 /*
         Statement进行SQL语句拼接
+            实现对查询结果的升降序的操作。
  */
 public class test7 {
     public static void main(String[] args) {
@@ -16,8 +17,8 @@ public class test7 {
         Scanner s = new Scanner(System.in);
         System.out.print("输入desc或asc：");
         String str = s.nextLine();
-        String Sql = "select ename,sal from emp order by sal " + str;
         try {
+            String Sql = "select ename,sal from emp order by sal " + str;
             c = dbc.getConnection();
             sta = c.createStatement();
             rs = sta.executeQuery(Sql);
