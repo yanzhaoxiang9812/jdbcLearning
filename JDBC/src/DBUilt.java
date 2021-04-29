@@ -1,9 +1,7 @@
 import java.sql.*;
-
-
 /*
         JDBC工具类
-     */
+*/
 public class DBUilt {
     private DBUilt(){ }
     //使用静态代码块，类加载。
@@ -26,21 +24,21 @@ public class DBUilt {
         if (res != null ){
             try {
                 res.close();
-            } catch (SQLException throwables) {
+            } catch (Exception throwables) {
                 throwables.printStackTrace();
             }
         }
         if (sta != null ){
             try {
                 sta.close();
-            } catch (SQLException throwables) {
+            } catch (Exception throwables) {
                 throwables.printStackTrace();
             }
         }
         if (conn != null ){
             try {
                 conn.close();
-            } catch (SQLException throwables) {
+            } catch (Exception throwables) {
                 throwables.printStackTrace();
             }
         }
